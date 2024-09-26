@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+
+
+    .calculator {
+      height: 350px;
+      width: 290px;
+      border: 1px solid black;
+      margin: 66px auto;
+      border-radius: 7px;
+      background-color: #fff;
+
+    }
+
+    /* .btn-container{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px;
+     
+     
+      
+    } */
+    .btn-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 9px;
+      margin: 12px 12px;
+    }
+
+    .btn {
+      height: 50px;
+      width: 50px;
+      margin: 5px;
+      font-size: 18px;
+    }
+
+    #input {
+
+      margin: 7px;
+      width: 270px;
+      font-size: 40px;
+      text-align: right;
+      border-radius: 4px;
+    }
+
+    .arithmetic {
+      background-color: rgba(0, 0, 0, 0.626);
+      color: white;
+      font-weight: bold;
+    }
+
+    #C {
+      background-color: rgb(208, 37, 37);
+      color: white;
+      font-weight: bold;
+
+    }
+
+    #equal {
+      background-color: rgb(111, 159, 218);
+      color: white;
+      font-weight: bold;
+
+    }
+
+    h1 {
+      text-align: center;
+      font-family: sans-serif;
+      letter-spacing: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My First Project : Calculator</h1>
+  <hr>
+
+
+  <div class="calculator">
+    <input type="text" readonly id="input">
+    <div class="btn-container">
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'7'; 
+       document.querySelector('#input').value=currentDisplay;  ">7</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'8'; 
+       document.querySelector('#input').value=currentDisplay;  ">8</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'9'; 
+       document.querySelector('#input').value=currentDisplay;  ">9</button>
+
+      <button class="btn arithmetic" onclick="currentDisplay=currentDisplay+'+'; 
+       document.querySelector('#input').value=currentDisplay;  ">+</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'4'; 
+       document.querySelector('#input').value=currentDisplay;  ">4</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'5'; 
+       document.querySelector('#input').value=currentDisplay;  ">5</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'6'; 
+       document.querySelector('#input').value=currentDisplay;  ">6</button>
+
+      <button class="btn arithmetic" onclick="currentDisplay=currentDisplay+'-'; 
+       document.querySelector('#input').value=currentDisplay;  ">-</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'1'; 
+       document.querySelector('#input').value=currentDisplay;  ">1</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'2'; 
+       document.querySelector('#input').value=currentDisplay;  ">2</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'3'; 
+       document.querySelector('#input').value=currentDisplay;  ">3</button>
+
+      <button class="btn arithmetic" onclick="currentDisplay=currentDisplay+'*'; 
+       document.querySelector('#input').value=currentDisplay;  ">x</button>
+
+      <button class="btn" id="C" onclick="currentDisplay='';
+       document.querySelector('#input').value=currentDisplay; 
+       ">C</button>
+
+      <button class="btn" onclick="currentDisplay=currentDisplay+'0'; 
+       document.querySelector('#input').value=currentDisplay;  ">0</button>
+
+      <button class="btn" id="equal" onclick="currentDisplay=eval(currentDisplay); 
+       document.querySelector('#input').value=currentDisplay;  ">=</button>
+
+      <button class="btn arithmetic"
+      onclick="currentDisplay=currentDisplay+'/';
+     document.querySelector('#input').value = currentDisplay; " >/</button>
+    </div>
+  </div>
+
+
+
+  <script>
+    let currentDisplay = '';
+    document.querySelector('#input').value = currentDisplay;
+
+  </script>
+
+</body>
+
+</html>
